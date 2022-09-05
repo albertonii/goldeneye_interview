@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Muli", sans-serif;
+}
+
+.container {
+  background: linear-gradient(
+    90deg,
+    #34ba80 0%,
+    rgba(35, 129, 126, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100%;
+  min-height: 100vh;
+}
+
+.row {
+  min-height: auto;
+}
+
+.emailForm {
+  padding: 20px;
+}
+
+label {
+  font-size: 1.6rem;
+  padding: 0.5rem 0.5rem 0 0;
+}
+
+/* Email Form HTML */
+
+input {
+  font-family: "Muli", sans-serif;
+  margin: 0.8;
+}
+
+input[type="text"] {
+  border-radius: 10%;
+  font-size: 1.6rem;
+  padding: 0.5rem 0.5rem 0 0;
+}
+
+.buttonsContainer {
+  padding: 1.6rem 0 0 0;
+}
+
+input[type="submit"] {
+  border: solid 0px;
+  border-radius: 5%;
+  background: white;
+
+  font-size: 1.6rem;
+  padding: 0.5rem 0.8rem 0.5rem 0.8rem;
+  margin: 0 0.8rem 0 0;
+  transition: 0.5s;
+}
+
+input[type="submit"]:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 225) 0%,
+    rgba(35, 129, 126, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  color: white;
+  transition: 0.2s;
+  opacity: 0.7;
+}
+
+input[type="submit"]:active {
+  opacity: 1;
+}
+
+input[type="reset"] {
+  border: solid 0px;
+  border-radius: 5%;
+  background: white;
+  font-size: 1.6rem;
+  padding: 0.5rem 0.8rem 0.5rem 0.8rem;
+  margin: 0 0.8rem 0 0.8rem;
+  transition: 0.5s;
+}
+
+input[type="reset"]:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 225) 0%,
+    rgba(35, 129, 126, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  color: white;
+  transition: 0.2s;
+  opacity: 0.7;
+}
+
+input[type="reset"]:active {
+  opacity: 1;
+}
+
+select#department {
+  background: white;
+  border-radius: 10%;
+  margin-top: 1rem;
+  padding: 0.5rem 0.8rem 0.5rem 0.8rem;
+  font-family: "Muli", sans-serif;
+  font-size: 1.6rem;
+}
+
+select#office {
+  background: white;
+  border-radius: 10%;
+  margin-top: 1rem;
+  padding: 0.5rem 0.8rem 0.5rem 0.8rem;
+  font-family: "Muli", sans-serif;
+  font-size: 1.6rem;
+}
+
+fieldset {
+  border-radius: 5%;
+  font-size: 1.4rem;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 225) 0%,
+    rgba(35, 129, 126, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  max-width: 500px;
+  padding: 16px;
+}
+
+#codebayLogo {
+  color: white;
+  font-size: 2.4rem;
+  font-family: "Playfair Display", sans-serif;
+}
+
+.legendMail {
+  margin-bottom: 0px;
+  margin-left: 16px;
+}
+
+/* Email View HTML */
+div#title {
+  margin: 0 0 1.2rem 0;
+  font-family: "Muli", sans-serif;
+  font-size: 2.4rem;
+}
+
+div#newEmail {
+  color: white;
+  font-size: 4rem;
+  font-family: "Playfair Display", sans-serif;
+  transition: 0.8s;
+}
+
+div#newEmail:hover {
+  padding: 0.1rem 2rem 0.1rem 2rem;
+
+  animation-name: emailGradient;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+
+  font-size: 5rem;
+}
+
+@keyframes emailGradient {
+  0% {
+    background-color: rgb(233, 122, 49);
+  }
+  50% {
+    background-color: #e9a331;
+  }
+  100% {
+    background-color: #d5c83e;
+  }
+}

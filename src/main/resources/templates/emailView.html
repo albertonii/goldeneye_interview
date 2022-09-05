@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>Home page</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link th:href="@{/styles/index.css}" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="column">
+          <div id="title">
+            Contratulations! This is your coorporation email.
+            <i>Try to copy it! </i>
+          </div>
+          <div id="newEmail">
+            <p id="newEmailP" th:text="${newEmail}">Subject</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

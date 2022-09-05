@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>Home page</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link th:href="@{/styles/index.css}" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row emailForm">
+        <div class="column">
+          <form
+            action="#"
+            th:action="@{/email-gen}"
+            method="post"
+            th:object="${emailForm}"
+          >
+            <fieldset>
+              <legend id="legendMail">
+                Creador de correos -
+                <span id="codebayLogo"><strong>CODEBAY</strong> </span>
+              </legend>
+
+              <div class="nameInput">
+                <label>Name:</label>
+                <input type="text" th:field="*{name}" />
+              </div>
+
+              <br />
+
+              <div class="surnameInput">
+                <label>Surname:</label>
+                <input type="text" th:field="*{surname}" />
+              </div>
+
+              <br />
+
+              <div class="departmentInput">
+                <label>Department:</label>
+                <select id="department" th:field="${emailForm.department}">
+                  <option
+                    th:each="department : ${allDepartments}"
+                    th:value="${department}"
+                    th:text="${department}"
+                  >
+                    Wireframe
+                  </option>
+                </select>
+              </div>
+
+              <br />
+
+              <div class="officeInput">
+                <label>Office:</label>
+                <select id="office" th:field="${emailForm.office}">
+                  <option
+                    th:each="office : ${allOffices}"
+                    th:value="${office}"
+                    th:text="${office}"
+                  >
+                    Wireframe
+                  </option>
+                </select>
+              </div>
+
+              <br />
+            </fieldset>
+
+            <div class="buttonsContainer">
+              <p>
+                <input type="submit" value="Enviar" />
+                <input type="reset" value="Reset" />
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

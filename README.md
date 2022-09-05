@@ -2,15 +2,14 @@
 
 ## What you need
 
--   JDK 1.8+
--   Maven 3+
+- JDK 1.8+
+- Maven 3+
 
 ## What it's included into the project
 
 - Spring Boot
-- FreeMarker
+- ~~FreeMarker~~ -> Thymeleaf
 
 ## Run de application
 
     mvn spring-boot:run
-
